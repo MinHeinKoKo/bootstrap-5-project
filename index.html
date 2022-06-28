@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B5 Project</title>
+
+    <!-- Primary Meta Tags -->
+    <title>DH Bootstrap-5</title>
+    <meta name="title" content="DH Bootstrap-5">
+    <meta name="description" content="Bootstrap-5 project လေးပါခင်ဗျ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digitalhunter.io/">
+    <meta property="og:title" content="DH Bootstrap-5">
+    <meta property="og:description" content="Bootstrap-5 project လေးပါခင်ဗျ">
+    <meta property="og:image" content="assets/img/bootstrap-5.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://digitalhunter.io/">
+    <meta property="twitter:title" content="DH Bootstrap-5">
+    <meta property="twitter:description" content="Bootstrap-5 project လေးပါခင်ဗျ">
+    <meta property="twitter:image" content="assets/img/bootstrap-5.png">
+
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/packages/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/packages/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/packages/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./assets/css/cus.css">
+    <link rel="stylesheet" href="./node_modules/colormyar/css/pdf.css">
+</head>
+<body>
+    <nav class="navbar shadow-lg navbar-expand-lg bg-light border-bottom animate__animated ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler p-0 o-n" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team-member">Team member</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <!-- home -->
+    <div class="container my-5 pt-3" id="home">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-xl-5 mb-3 mb-lg-0 headline">
+                <div class="">
+                    <span class="text-danger">Get Started</span>
+                    <h1 class="fw-bold">Make More Time For The Work That Make Matters Most</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nemo facere similique optio doloremque odit ratione nisi corrupti quidem libero. Dignissimos eaque ex vel necessitatibus nemo corrupti officiis voluptatum quia.
+                    </p>
+                    <div class="">
+                        <button class="btn btn-danger px-4 rounded-pill pdf-bg-red-500 shadow-lg shadow-red-400">Call Now</button>
+                        <button class="btn btn-warning px-5 rounded-pill pdf-bg-yellow-400 shadow-lg shadow-yellow-400">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-8 col-xl-6 headline">
+                <div class="">
+                    <img src="./assets/img/home-img.png" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services -->   
+    <div class="container" id="services">
+        <div class="row my-5 justify-content-between align-items-center">
+            <div class="col-xl-5 mb-3 mb-lg-0 headline">
+                <div class="">
+                    <span class="text-danger">Get Services</span>
+                    <h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis!
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eius sed blanditiis non exercitationem ducimus eveniet minima natus at obcaecati facere ipsam aliquid, repellendus laboriosam nam assumenda laborum delectus voluptatum.
+                    </p>
+                    <button class="btn btn-danger rounded-pill px-4 pdf-bg-red-500 shadow-lg shadow-red-400">Services</button>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="row g-4">
+                    <div class="col-xl-6 headline">
+                        <div class="card  border-0 rounded-5 shadow-xl shadow-zinc-300">
+                            <div class="card-body">
+                                <div class="service-icon bg-danger d-flex justify-content-center align-items-center rounded-circle pdf-bg-red-500 shadow-lg shadow-red-400">
+                                    <i class="fas fa-home text-white"></i>
+                                </div>
+                                <h4 class="my-4">
+                                    customer support
+                                </h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 headline">
+                        <div class="card rounded-5 border-0 shadow-xl shadow-zinc-300 ">
+                            <div class="card-body">
+                                <div class="service-icon bg-success d-flex justify-content-center align-items-center rounded-circle pdf-bg-teal-300 shadow-lg shadow-teal-300">
+                                    <i class="fas fa-home text-white"></i>
+                                </div>
+                                <h4 class="my-4">
+                                    customer support
+                                </h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 headline">
+                        <div class="card rounded-5 border-0 shadow-xl shadow-zinc-300">
+                            <div class="card-body">
+                                <div class="service-icon bg-info d-flex justify-content-center align-items-center rounded-circle pdf-bg-sky-300 shadow-lg shadow-sky-300">
+                                    <i class="fas fa-home text-white"></i>
+                                </div>
+                                <h4 class="my-4">
+                                    customer support
+                                </h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 headline">
+                        <div class="card rounded-5 border-0 shadow-xl shadow-zinc-300">
+                            <div class="card-body">
+                                <div class="service-icon bg-warning d-flex justify-content-center align-items-center rounded-circle pdf-bg-yellow-300 shadow-lg shadow-yellow-300">
+                                    <i class="fas fa-home text-white"></i>
+                                </div>
+                                <h4 class="my-4">
+                                    customer support
+                                </h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div class="container" id="about">
+        <div class="row justify-content-evenly align-items-center my-5">
+            <div class="col-xl-5 headline">
+                <div class="">
+                    <img src="./assets/img/about.jpg" class="w-100 rounded-5" alt="">
+                </div>
+            </div>
+            <div class="col-xl-5 headline">
+                <div class="">
+                    <span class="text-danger">Get Started</span>
+                    <h1 class="fw-bold">Make More Time For The Work That Make Matters Most</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nemo facere similique optio doloremque odit ratione nisi corrupti quidem libero. Dignissimos eaque ex vel necessitatibus nemo corrupti officiis voluptatum quia.
+                    </p>
+                    <div class="">
+                        <button class="btn btn-danger px-4 rounded-pill me-3 pdf-bg-red-500 shadow-lg shadow-red-400">Call Now</button>
+                        <button class="btn btn-warning px-5 rounded-pill pdf-bg-yellow-300 shadow-lg shadow-yellow-300">Email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div class="container" id="portfolio">
+        <div class="row justify-content-between small my-4">
+            <div class="col-xl-6 headline">
+                <div class="">
+                    <span class="text-danger">Portfolio</span>
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                </div>
+            </div>
+            <div class="col-xl-4 headline">
+                <div class="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora tempore, omnis ab ad quisquam, obcaecati ipsum architecto placeat, culpa eos illum? Numquam delectus ea odit voluptate quo necessitatibus quam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-12 px-4 p-lg-0">
+                <div class="">
+                    <div class="portfolio">
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card mx-2 rounded-5 border-0" style="width: 18rem;">
+                            <img src="./assets/img/car.jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team member -->
+    <div class="container" id="team-member">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 mb-3">
+                <div class="text-center my-5">
+                    <h6 class="text-danger">Our Team</h6>
+                    <h4>Meet Our Team Of Experts</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-xl-6 headline">
+                <div class="card mb-3 border-0" >
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./assets/img/programmer.jpg" class="img-fluid rounded-start rounded-5 shadow" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="">
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-instagram"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 headline">
+                <div class="card mb-3 border-0" >
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./assets/img/programmer.jpg" class="img-fluid rounded-start rounded-5 shadow" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="">
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-instagram"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 headline">
+                <div class="card mb-3 border-0" >
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./assets/img/programmer.jpg" class="img-fluid rounded-start rounded-5 shadow" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="">
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-instagram"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 headline">
+                <div class="card mb-3 border-0" >
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./assets/img/programmer.jpg" class="img-fluid rounded-start rounded-5 shadow" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="">
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-instagram"></i></a>
+                                    <a class="mx-2 text-dark" href="#"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial -->
+    <div class="container" id="testimonial">
+        <div class="row">
+            
+                <div class="row justify-content-center align-items-center gy-3 g-xl-3">
+                    <div class="col-12 mb-3">
+                        <div class="text-center my-5">
+                            <h6 class="text-danger">Testimonial</h6>
+                            <h4>Meet Our Team Of Experts</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4">
+                        <div class="card border-0 rounded-5 shadow">
+                            <div class="card-body">
+                                <div class="service-icon testimonial-icon bg-danger d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-red-500 shadow-lg shadow-red-400">
+                                    <i class="fa-solid fa-quote-left text-white"></i>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi neque error vel facere iusto porro iure minus deleniti corporis debitis voluptatem sunt consequuntur inventore, natus dolor corrupti eveniet fuga.
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="./assets/img/about.jpg" class="service-icon rounded-circle me-4" alt="">
+                                    <div class="">
+                                        <h5>Min Hein Ko Ko</h5>
+                                        <span>13 july 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 rounded-5 shadow">
+                            <div class="card-body">
+                                <div class="service-icon testimonial-icon bg-danger d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-red-500 shadow-lg shadow-red-400">
+                                    <i class="fa-solid fa-quote-left text-white"></i>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi neque error vel facere iusto porro iure minus deleniti corporis debitis voluptatem sunt consequuntur inventore, natus dolor corrupti eveniet fuga.
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="./assets/img/about.jpg" class="service-icon rounded-circle me-4" alt="">
+                                    <div class="">
+                                        <h5>Min Hein Ko Ko</h5>
+                                        <span>13 july 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 rounded-5 shadow">
+                            <div class="card-body">
+                                <div class="service-icon testimonial-icon bg-danger d-flex justify-content-center align-items-center rounded-circle mb-3 pdf-bg-red-500 shadow-lg shadow-red-400">
+                                    <i class="fa-solid fa-quote-left text-white"></i>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi neque error vel facere iusto porro iure minus deleniti corporis debitis voluptatem sunt consequuntur inventore, natus dolor corrupti eveniet fuga.
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="./assets/img/about.jpg" class="service-icon rounded-circle me-4" alt="">
+                                    <div class="">
+                                        <h5>Min Hein Ko Ko</h5>
+                                        <span>13 july 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <!-- Pricing -->
+    <div class="container my-5" id="pricing">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-xl-3 mb-3">
+                <div class="text-center my-5">
+                    <h6 class="text-danger">Pricing</h6>
+                    <h4>Choose The Right Plan For Your Bussiness</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-3">
+            <div class="col-xl-4">
+                <div class="card border-0 rounded-5 shadow-lg shadow-zinc-300">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="">
+                                <h4>Basic</h4>
+                                <span>Basic Price</span>
+                            </div>
+                            <div class="">
+                                <h4>$100</h4>
+                                <span>New Plan</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <button class="btn btn-primary w-100 rounded-pill mt-2 shadow-lg shadow-blue-300">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card border-0 rounded-5 shadow-lg shadow-zinc-300">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="">
+                                <h4>Basic</h4>
+                                <span>Basic Price</span>
+                            </div>
+                            <div class="">
+                                <h4>$100</h4>
+                                <span>New Plan</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <button class="btn btn-primary w-100 rounded-pill mt-2 shadow-lg shadow-blue-300">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card border-0 rounded-5 shadow-lg shadow-zinc-300">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="">
+                                <h4>Basic</h4>
+                                <span>Basic Price</span>
+                            </div>
+                            <div class="">
+                                <h4>$100</h4>
+                                <span>New Plan</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <button class="btn btn-primary w-100 rounded-pill mt-2 shadow-lg shadow-blue-300">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="">
+                    <div class="">
+                        <h2>Get In Touch</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt commodi repellat suscipit quasi nesciunt distinctio iusto corporis nihil veniam illum, excepturi delectus expedita, autem nulla ad iure minus sed quis?
+                        </p>
+                    </div>
+                    <div class="card border-0 rounded-5 shadow-lg mb-3 shadow-zinc-300">
+                        <div class="card-body">
+                            <div class="">
+                                <div class="d-flex justify-content-start align-items-center mb-3">
+                                    <div class="service-icon bg-info d-flex justify-content-center align-items-center rounded-5 pdf-bg-sky-100 shadow-lg shadow-sky-300">
+                                        <i class="fas fa-map-location pdf-text-sky-500"></i>
+                                    </div>
+                                    <div class="mx-2">
+                                        <h5>Address</h5>
+                                        <p class="small">
+                                            Lorem ipsum dolor sit amet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-5 shadow-lg mb-3 shadow-zinc-300">
+                        <div class="card-body">
+                            <div class="">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <div class="service-icon bg-warning d-flex justify-content-center align-items-center rounded-5 pdf-bg-yellow-100 shadow-lg shadow-yellow-300">
+                                        <i class="fas fa-phone pdf-text-yellow-600"></i>
+                                    </div>
+                                    <div class="mx-2">
+                                        <h5>Phone</h5>
+                                        <p class="small">
+                                            Lorem ipsum dolor sit amet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 rounded-5 shadow-lg shadow-zinc-300 mb-3">
+                        <div class="card-body">
+                            <div class="">
+                                <div class="d-flex justify-content-start align-items-center mb-3 " >
+                                    <div class="service-icon bg-danger d-flex justify-content-center align-items-center rounded-5 pdf-bg-red-100 shadow-lg shadow-red-200">
+                                        <i class="fas fa-envelope pdf-text-red-600"></i>
+                                    </div>
+                                    <div class="mx-2">
+                                        <h5>Email</h5>
+                                        <p class="small">
+                                            Lorem ipsum dolor sit amet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115336.99178289242!2d97.31579753850693!3d25.39540314418835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37307386e776f3b7%3A0x7454c7e88dc3c674!2sMyitkyina%2C%20Myanmar%20(Burma)!5e0!3m2!1sen!2suk!4v1655174883375!5m2!1sen!2suk" class="rounded-5 w-100" width="360" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-xl-4">
+                <div class="">
+                    <p class="fw-bold mb-2">Send A Request</p>
+                    <p class="text-muted small">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <form action="">
+                    <input type="email" class="form-control mb-3 rounded-pill" placeholder="Email">
+                    <input type="text" class="form-control mb-3 rounded-pill" placeholder="Phone">
+                    <textarea name="" class="form-control mb-3 rounded-5 mb-3" rows="10" placeholder="Message"></textarea>
+                    <button class="btn btn-primary rounded-pill float-end pdf-bg-blue-500">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="container border-top mt-2 mb-5">
+        <div class="row justify-content-center align-items-center pt-3 mb-5">
+            <div class="col-xl-6">
+                <div class="text-center">
+                    <div class="mb-5 headline">
+                        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, adipisci?</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing.
+                        </p>
+                    </div>
+                    <div class="my-3">
+                        <a href="#" class="btn btn-danger px-3 rounded-pill pdf-bg-red-600 shadow-lg shadow-red-600 headline"><i class="fab fa-apple me-2"></i> Download</a>
+                        <a href="#" class="btn btn-info px-3 rounded-pill pdf-bg-green-400 shadow-lg shadow-green-400 headline"><i class="fab fa-google-play me-2"></i> Play Store</a>
+                    </div>
+                    <div class="">
+                        <a href="#" class="text-decoration-none text-muted mx-4 headline">Home</a>
+                        <a href="#" class="text-decoration-none text-muted mx-4 headline">Home</a>
+                        <a href="#" class="text-decoration-none text-muted mx-4 headline">Home</a>
+                        <a href="#" class="text-decoration-none text-muted mx-4 headline">Home</a>
+                        <a href="#" class="text-decoration-none text-muted mx-4 headline">Home</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row border-top pt-5">
+            <div class="col-6">
+                <div class="">
+                    <span class="text-muted">@Digital Hunter</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex align-items-center justify-content-end">
+                    <span class="me-2">
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="changeTheme" >
+                    </div>                      
+                    <span>
+                        <i class="fa-solid fa-moon"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-fixed d-none animate__animated">
+        <div class="footer-icon rounded-circle d-flex justify-content-center align-items-center pdf-bg-blue-500 shadow-lg shadow-blue-300">
+            <a href="#home">
+                <i class="fas fa-angle-up text-white"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/packages/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="./assets/js/cus.js"></script>
+    <script>
+        window.addEventListener('load', ()=>{
+            document.querySelector(".loading").style.display = "none"
+        })
+        ScrollReveal({
+             origin: 'bottom' ,
+             distance: '200px',
+             duration: 1000,
+             reset: true,
+        }).reveal('.headline',{
+             interval: 200 ,
+             scale: 0.85 
+            });
+        $('.portfolio').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            autoplay: true,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+            });
+    </script>
+</body>
+</html>
